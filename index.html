@@ -747,14 +747,7 @@
             observer.observe(card);
         });
 
-        // Add click tracking (placeholder)
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                console.log('CTA clicked - redirect to conversion flow');
-                alert('CTA clicked! Redirect to pet flight search...');
-            });
-        });
+        // CTA buttons now link directly to Stripe checkout
     </script>
 </body>
 </html>
