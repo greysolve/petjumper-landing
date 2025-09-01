@@ -31,13 +31,12 @@
 
         /* Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            padding: 1.2rem 0;
+            background: #1e3a5f;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .nav-container {
@@ -50,18 +49,26 @@
         }
 
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #1e3a5f;
+            color: #ffffff;
+        }
+
+        .header-urgency {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fbbf24;
+            text-align: right;
+            opacity: 0.9;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f7f9fc 0%, #e2e8f0 100%);
-            color: #1a202c;
-            padding: 5rem 0 6rem;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
         }
 
         .hero::before {
@@ -83,24 +90,57 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            position: relative;
-            z-index: 1;
+        }
+
+        .hero-content {
+            max-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: visible;
+            padding: 1rem 0;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
             color: #1e3a5f;
-            animation: slideInUp 0.8s ease-out;
+            line-height: 1.2;
+            animation: slideInUp 0.8s ease-out 0.1s both;
         }
 
         .hero-content p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
             color: #4a5568;
+            line-height: 1.5;
             animation: slideInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-content .cta-button {
+            margin-bottom: 1rem;
+        }
+
+        .payment-trust {
+            margin-top: 8px;
+            margin-bottom: 12px;
+            text-align: left;
+            opacity: 0.75;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .value-points {
+            margin-bottom: 12px;
+        }
+
+        .hero-content .disclaimer {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            color: #6b7280;
         }
 
         .hero-image {
@@ -114,7 +154,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 400px;
+            height: 400px;
             overflow: hidden;
         }
 
@@ -370,18 +410,28 @@
                 font-size: 2rem;
             }
 
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+            .hero-content p {
+                font-size: 1rem;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-badges {
+            .nav-container {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .header-urgency {
+                font-size: 0.8rem;
+                text-align: center;
+            }
+
+            .testimonial-placeholder {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .payment-trust {
+                justify-content: center;
             }
 
             /* Fixed mobile CTA */
@@ -536,7 +586,7 @@
             </div>
             <div class="hero-content">
                 <h1>Find Flights That Welcome Your Pet On Board — Instantly.</h1>
-                <p>Instantly filter routes based on your pet’s weight, type, and travel preferences — across 1,000+ airlines and 80+ countries</p>
+                <p>Instantly filter routes based on your pet's weight, type, and travel preferences — across 1,000+ airlines and 80+ countries</p>
                 <a href="https://buy.stripe.com/3cs9B67Px7Av7ny6oo" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
                 <div class="payment-trust">
                     <img src="assets/img/Stripe_(company)-Powered-by-Stripe-Logo.wine.svg" alt="Powered by Stripe" class="stripe-badge">
@@ -547,7 +597,7 @@
                   <li>Real Airline & Country Pet Policies</li>
                   <li>Search Only Flights That Fit Your Pet</li>
                 </ul>
-                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                <div class="disclaimer">
                     Data sourced from official airline and government sites
                 </div>
             </div>
@@ -601,7 +651,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial hover-lift">
                     <div class="testimonial-content">
-                        "PetJumper saved our trip to Lisbon. My dog Bixby flew in the cabin and everything went smoothly! No stress, no surprises."
+                        "Saved me hours of searching and gave me peace of mind. Worth every penny."
                     </div>
                     <div class="testimonial-author">
                         <div class="pet-avatar">🐶</div>
