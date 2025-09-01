@@ -104,14 +104,18 @@
         }
 
         .hero-image {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
+            background: transparent;
             border-radius: 20px;
-            padding: 2rem;
+            padding: 0;
             text-align: center;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.08);
+            border: none;
+            box-shadow: none;
             animation: slideInUp 0.8s ease-out 0.4s both;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            overflow: hidden;
         }
 
         .hero-image-placeholder {
@@ -423,6 +427,30 @@
         .hover-lift:hover {
             transform: translateY(-3px);
         }
+
+        /* Value Points Styling */
+        .value-points {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .value-points li {
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .value-points li::before {
+            content: "✔️";
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -442,22 +470,17 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-image">
-                <div class="hero-image-placeholder">
-                    📸 Replace with iStock Image
-                    <br><br>
-                    Professional woman in olive hoodie and glasses, 
-                    sitting comfortably with her relaxed golden-white dog 
-                    in modern train/plane cabin with blue seating
-                    <br><br>
-                    Credit: Su Arslanoglu (iStock)
-                    <br>
-                    Shows successful, stress-free pet travel outcome
-                </div>
+                <img src="assets/img/egor-gordeev-dpTX9PxqGvY-unsplash.jpg" alt="Pet-friendly travel - woman with dog in comfortable travel setting" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
             </div>
             <div class="hero-content">
                 <h1>Find Flights That Welcome Your Pet On Board — Instantly.</h1>
                 <p>We match your travel plans with verified airline pet policies and government import rules.</p>
-                <a href="#" class="cta-button hover-lift">Get 5 Verified Pet Flight Searches</a>
+                <a href="#" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
+                <ul class="value-points">
+                  <li>Verified Airline Pet Policies</li>
+                  <li>Country Import Rules Included</li>
+                  <li>Save Hours of Research</li>
+                </ul>
                 <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
                     Data sourced from official airline and government sites
                 </div>
@@ -557,13 +580,13 @@
         <div class="final-cta-container">
             <h2>Ready to Find Your Pet-Friendly Flight?</h2>
             <p>Join thousands of pet parents who travel stress-free with verified flight information.</p>
-            <a href="#" class="cta-button hover-lift">Get 5 Verified Pet Flight Searches</a>
+            <a href="#" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
         </div>
     </section>
 
     <!-- Mobile Fixed CTA (only visible on mobile) -->
     <div class="mobile-cta" style="display: none;">
-        <a href="#" class="cta-button">Get 5 Verified Pet Flight Searches</a>
+        <a href="#" class="cta-button">Start My $14.99 Early Access Trial</a>
     </div>
 
     <script>
