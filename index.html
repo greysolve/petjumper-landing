@@ -491,6 +491,28 @@
         .airline-logos img:hover {
             opacity: 1;
         }
+
+        /* Payment Trust Styling */
+        .payment-trust {
+            margin-top: 8px;
+            text-align: left;
+            opacity: 0.75;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stripe-badge {
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .stripe-text-badge {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+            line-height: 1.2;
+        }
     </style>
 </head>
 <body>
@@ -515,7 +537,11 @@
             <div class="hero-content">
                 <h1>Find Flights That Welcome Your Pet On Board — Instantly.</h1>
                 <p>Instantly filter routes based on your pet’s weight, type, and travel preferences — across 1,000+ airlines and 80+ countries</p>
-                <a href="#" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
+                <a href="https://buy.stripe.com/3cs9B67Px7Av7ny6oo" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
+                <div class="payment-trust">
+                    <img src="assets/img/Stripe_(company)-Powered-by-Stripe-Logo.wine.svg" alt="Powered by Stripe" class="stripe-badge">
+                    <span class="stripe-text-badge">🔒 Secure checkout powered by Stripe</span>
+                </div>
                 <ul class="value-points">
                   <li>Covers 1,000+ Airlines Worldwide</li>
                   <li>Real Airline & Country Pet Policies</li>
@@ -558,14 +584,12 @@
             <h3>We Track Pet Policies from 1,000+ Airlines</h3>
             <p class="subtext">Including major international, regional, and low-cost carriers</p>
             <div class="airline-logos">
-                <img src="assets/img/delta-logo.svg" alt="Delta Airlines logo" />
-                <img src="assets/img/united-logo.svg" alt="United Airlines logo" />
-                <img src="assets/img/emirates-logo.svg" alt="Emirates logo" />
-                <img src="assets/img/lufthansa-logo.svg" alt="Lufthansa logo" />
-                <img src="assets/img/qantas-logo.svg" alt="Qantas logo" />
-                <img src="assets/img/jetblue-logo.svg" alt="JetBlue logo" />
-                <img src="assets/img/american-logo.svg" alt="American Airlines logo" />
-                <img src="assets/img/british-airways-logo.svg" alt="British Airways logo" />
+                <img src="assets/img/dl-plain.png" alt="Delta Airlines logo" />
+                <img src="assets/img/UA_Plain.jpeg" alt="United Airlines logo" />
+                <img src="assets/img/ek_plain.png" alt="Emirates logo" />
+                <img src="assets/img/lh_plain.png" alt="Lufthansa logo" />
+                <img src="assets/img/qf_plain.png" alt="Qantas logo" />
+                <img src="assets/img/B6-plain.png" alt="JetBlue logo" />
             </div>
         </div>
     </section>
@@ -638,13 +662,13 @@
         <div class="final-cta-container">
             <h2>Ready to Find Your Pet-Friendly Flight?</h2>
             <p>Join thousands of pet parents who travel stress-free with verified flight information.</p>
-            <a href="#" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
+            <a href="https://buy.stripe.com/3cs9B67Px7Av7ny6oo" class="cta-button hover-lift">Start My $14.99 Early Access Trial</a>
         </div>
     </section>
 
     <!-- Mobile Fixed CTA (only visible on mobile) -->
     <div class="mobile-cta" style="display: none;">
-        <a href="#" class="cta-button">Start My $14.99 Early Access Trial</a>
+        <a href="https://buy.stripe.com/3cs9B67Px7Av7ny6oo" class="cta-button">Start My $14.99 Early Access Trial</a>
     </div>
 
     <script>
